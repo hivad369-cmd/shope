@@ -1,0 +1,210 @@
+/* Minimal Carousel Styles */
+.minimal-carousel {
+    position: relative;
+    padding: 0 50px;
+    direction: rtl;
+}
+
+.minimal-carousel .carousel-wrapper {
+    overflow: hidden;
+}
+
+.minimal-carousel .carousel-inner {
+    display: flex;
+    transition: transform 0.4s ease;
+    gap: 20px;
+}
+
+.minimal-carousel .carousel-slide {
+    flex: 0 0 31.7%;
+    min-width: 0;
+}
+
+/* Product Card */
+.product-minimal-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: 400px;
+}
+
+.product-minimal-card:hover {
+    transform: translateY(-5px);
+}
+
+/* اضافه کردن محدودیت برای product-image */
+.minimal-carousel .product-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.minimal-carousel .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تغییر نام کلاس badge */
+.minimal-discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4757;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.minimal-hover-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: white;
+    text-align: right;
+}
+
+.product-minimal-card:hover .minimal-hover-layer {
+    opacity: 1;
+}
+
+.minimal-hover-layer h3 {
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+.minimal-btn-view {
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-height: 35px;
+    max-width: 100px;
+}
+
+.minimal-btn-view:hover {
+    background: #fdfdfd56;
+}
+
+.minimal-hover-layer .minimal-btn-view {
+    position: absolute;
+    right: 50%; /* وسط افقی */
+    transform: translate(50%, 50%); /* تنظیم دقیق وسط */
+    bottom: 100;
+}
+/* Carousel Controls */
+.minimal-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.minimal-carousel-btn:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* تغییر نام کلاس‌های دکمه */
+.minimal-carousel-prev {
+    left: 0;
+}
+
+.minimal-carousel-next {
+    right: 0;
+}
+
+/* Dots */
+.minimal-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.minimal-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.minimal-carousel-dot.active {
+    background: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .minimal-carousel .carousel-slide { 
+        flex: 0 0 50%; 
+    }
+    :root {
+        --slides-to-show: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .minimal-carousel .carousel-slide { 
+        flex: 0 0 100%; 
+    }
+
+    :root {
+        --slides-to-show: 1;
+    }
+    .product-minimal-card { 
+        height: 300px; 
+    }
+}
+
+.signal-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    z-index: 2;
+}
+
+.signal-icon i {
+    font-size: 14px;
+}
+
+.level-مقدماتی i { color: #3498db; }
+.level-متوسط i { color: #2ecc71; }
+.level-پیشرفته i { color: #e74c3c; }

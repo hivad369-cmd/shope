@@ -1,0 +1,265 @@
+/* استایل‌های رسپانسیو */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .checkout-content {
+        flex-direction: column;
+    }
+    
+    .order-summary-section {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .main-nav ul li {
+        margin: 5px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-detail {
+        flex-direction: column;
+    }
+    
+    .product-images {
+        margin-bottom: 30px;
+    }
+    
+    .cart-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .auth-container {
+        flex-direction: column;
+    }
+    
+    .auth-info {
+        margin-top: 30px;
+    }
+    
+    /* استایل برای صفحات موبایل */
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+    
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .main-nav ul li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    /* استایل‌های جدید برای صفحه اصلی */
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .slider-item {
+        flex: 0 0 100%;
+    }
+    
+    .products-slider-container {
+        padding: 0 20px;
+    }
+    
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .rank-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-info {
+        margin-bottom: 10px;
+    }
+    
+    .filters-section {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        width: 100%;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+    
+    .sold-count {
+        display: none;
+    }
+}
+
+/* استایل برای صفحات موبایل (قبل از media query) */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* استایل برای تبلت */
+@media (min-width: 577px) and (max-width: 768px) {
+    .product-card {
+        flex-direction: row;
+    }
+    
+    .product-image {
+        width: 40%;
+    }
+    
+    .product-info {
+        width: 60%;
+    }
+    
+    .admin-header { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 15px; 
+    }
+    
+    .stats-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .status-cards { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .chart-bars {
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 40px;
+    }
+    
+    .chart-col {
+        min-width: 50px;
+    }
+    
+    .back-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+/* استایل برای حالت پرینت */
+@media print {
+    .main-header,
+    .main-footer,
+    .cart-actions,
+    .checkout-actions {
+        display: none !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
